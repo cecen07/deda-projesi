@@ -1,0 +1,149 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1100px; /* Genişlik artırıldı */
+    margin: 0 auto;
+    background: #fff;
+    padding: 25px 40px; /* Yan boşluklar artırıldı */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+header {
+    text-align: center; /* Başlık ortalandı */
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    color: #0056b3;
+    margin: 0;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 40px; /* Sütunlar arası boşluk artırıldı */
+    align-items: flex-start;
+}
+
+main {
+    flex: 2; /* Ana içerik alanı daha geniş (2 birim) */
+    min-width: 0; /* Esnek kutu taşma problemlerini önler */
+}
+
+aside {
+    flex: 1; /* Kenar çubuğu daha dar (1 birim) */
+    position: sticky;
+    top: 20px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.kategori {
+    margin-bottom: 30px;
+}
+
+.kategori-baslik {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kriter {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px 5px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.kriter:hover {
+    background-color: #f0f8ff;
+}
+
+.kriter span {
+    flex: 1;
+}
+
+.kriter input {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+#sonuc-paneli h2, #sonuc-paneli h3 {
+    color: #0056b3;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+#genel-toplam-kutusu {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#genel-toplam-puan {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: #28a745;
+}
+
+#degerlendir-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+#degerlendir-btn:hover {
+    background-color: #218838;
+}
+
+#sonuc-mesaji {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Küçük ekranlar için mobil uyumluluk */
+@media (max-width: 992px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+    aside {
+        position: static;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 30px;
+    }
+}
