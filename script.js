@@ -23,11 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
             maddeler: [
                 { id: "2.1", metin: "Yönerge açık ve anlaşılır mı?" },
                 { id: "2.2", metin: "Yönerge öğrenci etkileşimini teşvik ediyor mu? (Soru, keşif, yönlendirme içeriyor mu?)" },
-                { id: "2.3", metin: "Evrensel tasarım ilkelerine uygun mu? (Sade dil, erişilebilirlik, farklı öğrenme biçimlerine uygunluk)" },
-                { id: "2.4", metin: "İçerikler telif haklarına uygun mu? (Kaynak belirtilmiş mi?)" },
-                { id: "2.5", metin: "Etkinlik süresi belirli mi? (Zaman planlaması net mi?)" },
-                { id: "2.6", metin: "Kullanılan araç için süre planlaması gerçekçi mi? (İçeriğin yoğunluğuna göre yeterli süre tanınmış mı?)" },
-                { id: "2.7", metin: "Etkinlik yenilikçi sınıf tasarımına uygun mu? (Aktif öğrenme, öğrenci merkezli, yaratıcı üretim destekli)" }
+                { id: "2.3", metin: "İçerikler telif haklarına uygun mu? (Kaynak belirtilmiş mi?)" },
+                { id: "2.4", metin: "Etkinlik süresi belirli mi? (Zaman planlaması net mi?)" },
+                { id: "2.5", metin: "Kullanılan araç için süre planlaması gerçekçi mi? (İçeriğin yoğunluğuna göre yeterli süre tanınmış mı?)" },
+                { id: "2.6", metin: "Etkinlik yenilikçi sınıf tasarımına uygun mu? (Aktif öğrenme, öğrenci merkezli, yaratıcı üretim destekli)" }
             ]
         },
         {
@@ -35,8 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             kategori_adi: "BAĞLANTILAR / İÇERİKLER",
             maddeler: [
                 { id: "3.1", metin: "Bağlantılar doğru yazılmış mı ve çalışıyor mu? (Linkler aktif ve doğru biçimde mi girilmiş?)" },
-                { id: "3.2", metin: "Etkinlikte dış kaynaklara yönlendirme yapılmış mı? (Kısa video, etkileşimli içerik, e-kitap vb.)" }
-            ]
+                            ]
         }
     ];
 
