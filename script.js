@@ -1,51 +1,59 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // Veri Yapısı: Kriterleri JSON formatında tanımlıyoruz.
+    // GÜNCELLENMİŞ VERİ YAPISI
     const kriterler = [
         {
             kategori_id: 1,
             kategori_adi: "ARAÇLAR / TEKNOLOJİ",
             maddeler: [
-                { id: "1.1", metin: "Dijital bir araç kullanılmış mı? (örnek: Canva, Mentimeter, Padlet)" },
-                { id: "1.2", metin: "Araç öğrenci etkileşimini artırıcı özellik sunuyor mu? (örn. canlı anket, yorum)" },
-                { id: "1.3", metin: "Araç, öğretmenin branşı ve etkinliğin hedefleriyle uyumlu mu?" },
-                { id: "1.4", metin: "Araç, ait olduğu kategoriye (içerik üretme, ölçme vb.) uygun seçilmiş mi?" },
-                { id: "1.5", metin: "Kullanılacak donanım (tablet, akıllı tahta vs.) açıkça belirtilmiş mi?" },
-                { id: "1.6", metin: "Araç mevcut okul altyapısı ile uyumlu çalışır mı?" },
-                { id: "1.7", metin: "MEB sistemleriyle veya yerel altyapıyla uyumlu araç mı? (örnek: MEB-KİT)" },
-                { id: "1.8", metin: "Araç, öğrenme sürecine katkı sağlıyor mu (içerik üretme, keşif, uygulama vs.)?" },
-                { id: "1.9", metin: "Teknolojinin amacı net, anlamlı ve abartısız şekilde mi kullanılmış?" }
+                { id: "1.1", metin: "Dijital araç kullanılmış mı? (Örn: Canva, Mentimeter, Wordwall, Padlet)" },
+                { id: "1.2", metin: "Araç öğrenci etkileşimini artırıyor mu? (Etkileşimli içerik, anket, canlı yorum vb.)" },
+                { id: "1.3", metin: "Araç branşa ve etkinlik hedefine uygun mu? (Branşın doğasına uygun seçilmiş mi?)" },
+                { id: "1.4", metin: "Araç, uygun kategori içinde mi seçilmiş? (Örn: Değerlendirme, sunum, içerik üretimi)" },
+                { id: "1.5", metin: "Kullanılacak donanım açıkça belirtilmiş mi? (Tablet, Akıllı tahta, Kamera vb.)" },
+                { id: "1.6", metin: "Etkinlik kapsamında öğrenciye dijital araçla üretim yaptırılıyor mu? (Örn: Afiş, video, sunum)" },
+                { id: "1.7", metin: "Araç öğrenmeyi somut olarak destekliyor mu? (Simülasyon, uygulama, deneyimleme)" },
+                { id: "1.8", metin: "Teknoloji, etkinlik amacına uygun ve işlevsel mi? (Gereksiz kullanımdan kaçınılmış mı?)" },
+                { id: "1.9", metin: "Araç yenilikçi sınıf bileşenlerine uygun biçimde kullanılmış mı? (Dijital pano, akıllı masa, VR, 3B yazıcı vb.)" }
             ]
         },
         {
             kategori_id: 2,
             kategori_adi: "ÖĞRENME ETKİNLİĞİ",
             maddeler: [
-                { id: "2.1", metin: "Etkinlik yönergesi açık, sade ve uygulanabilir mi?" },
-                { id: "2.2", metin: "Yönerge, öğrencinin aracı keşfetmesini ve katılımını teşvik ediyor mu?" },
-                { id: "2.3", metin: "Evrensel tasarım ilkelerine uygun mu? (erişilebilirlik, sade dil, anlaşılır yapı)" },
-                { id: "2.4", metin: "Kullanılan içerikler (resim, video vs.) telif haklarına uygun mu?" },
-                { id: "2.5", metin: "Etkinlik süresi belirli mi? (örnek: 20 dakika)" },
-                { id: "2.6", metin: "Kullanılan araç için önerilen süre gerçekçi ve uygulanabilir mi?" }
+                { id: "2.1", metin: "Yönerge açık ve anlaşılır mı?" },
+                { id: "2.2", metin: "Yönerge öğrenci etkileşimini teşvik ediyor mu? (Soru, keşif, yönlendirme içeriyor mu?)" },
+                { id: "2.3", metin: "Evrensel tasarım ilkelerine uygun mu? (Sade dil, erişilebilirlik, farklı öğrenme biçimlerine uygunluk)" },
+                { id: "2.4", metin: "İçerikler telif haklarına uygun mu? (Kaynak belirtilmiş mi?)" },
+                { id: "2.5", metin: "Etkinlik süresi belirli mi? (Zaman planlaması net mi?)" },
+                { id: "2.6", metin: "Kullanılan araç için süre planlaması gerçekçi mi? (İçeriğin yoğunluğuna göre yeterli süre tanınmış mı?)" },
+                { id: "2.7", metin: "Etkinlik yenilikçi sınıf tasarımına uygun mu? (Aktif öğrenme, öğrenci merkezli, yaratıcı üretim destekli)" }
             ]
         },
         {
             kategori_id: 3,
-            kategori_adi: "BAĞLANTILAR",
+            kategori_adi: "BAĞLANTILAR / İÇERİKLER",
             maddeler: [
-                { id: "3.1", metin: "Tüm bağlantılar doğru yazılmış mı ve aktif mi çalışıyor?" }
+                { id: "3.1", metin: "Bağlantılar doğru yazılmış mı ve çalışıyor mu? (Linkler aktif ve doğru biçimde mi girilmiş?)" },
+                { id: "3.2", metin: "Etkinlikte dış kaynaklara yönlendirme yapılmış mı? (Kısa video, etkileşimli içerik, e-kitap vb.)" }
             ]
         }
     ];
 
+    // TOPLAM PUANI DİNAMİK OLARAK HESAPLAMA
+    const toplamMaddeSayisi = kriterler.reduce((toplam, kategori) => toplam + kategori.maddeler.length, 0);
+
     const formAlani = document.getElementById('degerlendirme-formu');
-    const araToplamlarAlani = document.getElementById('ara-toplamlar');
     const genelToplamPuanAlani = document.getElementById('genel-toplam-puan');
     const degerlendirBtn = document.getElementById('degerlendir-btn');
     const sonucMesajiAlani = document.getElementById('sonuc-mesaji');
+    
+    // Sayfa ilk yüklendiğinde toplam puanı doğru göster
+    genelToplamPuanAlani.textContent = `0 / ${toplamMaddeSayisi}`;
 
-    // Kriterleri ekrana dinamik olarak yerleştiren fonksiyon
+
     function renderKriterler() {
+        formAlani.innerHTML = ''; // Formu temizle
         kriterler.forEach(kategori => {
             let kategoriHtml = `
                 <div class="kategori" id="kategori-${kategori.kategori_id}">
@@ -67,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Puanları hesaplayan ve anlık güncelleyen fonksiyon
     function hesaplaVeGuncelle() {
         let genelToplam = 0;
         kriterler.forEach(kategori => {
@@ -80,22 +87,22 @@ document.addEventListener('DOMContentLoaded', function() {
             kategoriPuanGostergesi.textContent = `${araPuan} / ${kategori.maddeler.length}`;
         });
 
-        genelToplamPuanAlani.textContent = `${genelToplam} / 16`;
+        genelToplamPuanAlani.textContent = `${genelToplam} / ${toplamMaddeSayisi}`;
     }
 
-    // "Değerlendir" butonuna basıldığında sonucu gösteren fonksiyon
+    // GÜNCELLENMİŞ PUAN ARALIKLARI
     function sonucuGoster() {
         const genelPuan = parseInt(genelToplamPuanAlani.textContent.split(' ')[0]);
         let mesaj = '';
         let renk = '';
 
-        if (genelPuan <= 5) {
+        if (genelPuan <= 6) {
             mesaj = '<strong>Geliştirilmesi Gereken Bir Etkinlik:</strong> Etkinliğiniz temel düzeyde. Özellikle Araçlar/Teknoloji başlığındaki kriterleri gözden geçirerek dijital entegrasyonu güçlendirebilirsiniz.';
             renk = '#dc3545';
-        } else if (genelPuan <= 10) {
+        } else if (genelPuan <= 12) {
             mesaj = '<strong>Potansiyel Taşıyan Etkinlik:</strong> İyi bir başlangıç! Öğrenme Etkinliği başlığındaki maddelere odaklanarak etkinliğinizi daha pedagojik ve erişilebilir hale getirebilirsiniz.';
             renk = '#ffc107';
-        } else if (genelPuan <= 14) {
+        } else if (genelPuan <= 16) {
             mesaj = '<strong>Başarılı Bir Dijital Etkinlik:</strong> Tebrikler! Teknoloji kullanımı anlamlı ve öğrenme hedefleriyle uyumlu. Harika bir iş çıkarmışsınız.';
             renk = '#17a2b8';
         } else {
@@ -109,10 +116,8 @@ document.addEventListener('DOMContentLoaded', function() {
         sonucMesajiAlani.classList.remove('hidden');
     }
 
-    // Başlangıç
     renderKriterler();
 
-    // Olay Dinleyicileri
     formAlani.addEventListener('change', hesaplaVeGuncelle);
     degerlendirBtn.addEventListener('click', sonucuGoster);
 });
