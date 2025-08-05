@@ -18,7 +18,7 @@ body {
 
 header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border-bottom: 2px solid #e9ecef;
     padding-bottom: 20px;
 }
@@ -28,85 +28,41 @@ header h1 {
     margin: 0;
 }
 
+/* YENİ STİLLER: BİLGİ GİRİŞ ALANLARI */
+.etkinlik-bilgileri {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+.etkinlik-bilgileri input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
 .content-wrapper {
     display: flex;
     gap: 40px;
     align-items: flex-start;
 }
 
-main {
-    flex: 2;
-    min-width: 0;
-}
+main { flex: 2; min-width: 0; }
+aside { flex: 1; position: sticky; top: 20px; background-color: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px solid #e9ecef; }
+.kategori { margin-bottom: 30px; }
+.kategori-baslik { background-color: #007bff; color: white; padding: 10px 15px; border-radius: 5px; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; }
+.kriter { display: flex; align-items: flex-start; padding: 12px 5px; border-bottom: 1px solid #eee; transition: background-color 0.2s; cursor: pointer; }
+.kriter:hover { background-color: #f0f8ff; }
+.kriter span { flex: 1; }
+.kriter input { width: 18px; height: 18px; margin-top: 3px; margin-right: 15px; flex-shrink: 0; }
 
-aside {
-    flex: 1;
-    position: sticky;
-    top: 20px;
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #e9ecef;
-}
+#sonuc-paneli h2, #sonuc-paneli h3 { color: #0056b3; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+#genel-toplam-kutusu { margin-top: 20px; text-align: center; }
+#genel-toplam-puan { font-size: 2.8em; font-weight: bold; color: #28a745; }
 
-.kategori {
-    margin-bottom: 30px;
-}
-
-.kategori-baslik {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.kriter {
-    display: flex;
-    align-items: flex-start;
-    padding: 12px 5px;
-    border-bottom: 1px solid #eee;
-    transition: background-color 0.2s;
-    cursor: pointer;
-}
-
-.kriter:hover {
-    background-color: #f0f8ff;
-}
-
-.kriter span {
-    flex: 1;
-}
-
-.kriter input {
-    width: 18px;
-    height: 18px;
-    margin-top: 3px;
-    margin-right: 15px;
-    flex-shrink: 0;
-}
-
-#sonuc-paneli h2, #sonuc-paneli h3 {
-    color: #0056b3;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
-}
-
-#genel-toplam-kutusu {
-    margin-top: 20px;
-    text-align: center;
-}
-
-#genel-toplam-puan {
-    font-size: 2.8em;
-    font-weight: bold;
-    color: #28a745;
-}
-
-#degerlendir-btn {
+/* BUTON STİLİ */
+#kaydet-btn {
     width: 100%;
     padding: 15px;
     background-color: #28a745;
@@ -118,31 +74,40 @@ aside {
     margin-top: 20px;
     transition: background-color 0.3s;
 }
+#kaydet-btn:hover { background-color: #218838; }
 
-#degerlendir-btn:hover {
-    background-color: #218838;
+#sonuc-mesaji { margin-top: 20px; padding: 15px; border-radius: 5px; text-align: center; line-height: 1.5; }
+.hidden { display: none; }
+
+/* YENİ STİLLER: KAYIT TABLOSU */
+.kayitlar-bolumu {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #e9ecef;
 }
-
-#sonuc-mesaji {
+#kayit-tablosu {
+    width: 100%;
+    border-collapse: collapse;
     margin-top: 20px;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-    line-height: 1.5;
+}
+#kayit-tablosu th, #kayit-tablosu td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+#kayit-tablosu th {
+    background-color: #007bff;
+    color: white;
+}
+#kayit-tablosu tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+#kayit-tablosu tbody tr:hover {
+    background-color: #ddd;
 }
 
-.hidden {
-    display: none;
-}
 
 @media (max-width: 992px) {
-    .content-wrapper {
-        flex-direction: column;
-    }
-    aside {
-        position: static;
-        width: 100%;
-        box-sizing: border-box;
-        margin-top: 30px;
-    }
+    .etkinlik-bilgileri, .content-wrapper { flex-direction: column; }
+    aside { position: static; width: 100%; box-sizing: border-box; margin-top: 30px; }
 }
