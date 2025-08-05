@@ -13,6 +13,13 @@
             <h1>Dijital Etkinlik Değerlendirme Aracı (DEDA)</h1>
             <p>Öğretmenlerin geliştirdiği dijital etkinlikleri bilişim açısından değerlendirin.</p>
         </header>
+
+        <!-- YENİ BÖLÜM: ETKİNLİK BİLGİ GİRİŞİ -->
+        <div class="etkinlik-bilgileri">
+            <input type="text" id="ogretmen-adi" placeholder="Hazırlayan Öğretmen Adı">
+            <input type="text" id="brans" placeholder="Branş">
+            <input type="text" id="etkinlik-no" placeholder="Etkinlik Adı / No">
+        </div>
         
         <div class="content-wrapper">
             <main id="degerlendirme-formu">
@@ -26,13 +33,35 @@
                 </div>
                 <div id="genel-toplam-kutusu">
                     <h3>Genel Toplam</h3>
-                    <span id="genel-toplam-puan">0 / 18</span>
+                    <span id="genel-toplam-puan">0 / 16</span>
                 </div>
-                <button id="degerlendir-btn">Sonucu Değerlendir</button>
+                <!-- BUTON GÜNCELLENDİ -->
+                <button id="kaydet-btn">Değerlendirmeyi Kaydet</button>
                 <div id="sonuc-mesaji" class="hidden">
                     <!-- Değerlendirme çıktısı buraya gelecek -->
                 </div>
             </aside>
+        </div>
+
+        <!-- YENİ BÖLÜM: KAYIT TABLOSU -->
+        <div class="kayitlar-bolumu">
+            <h2>Kaydedilen Değerlendirmeler</h2>
+            <table id="kayit-tablosu">
+                <thead>
+                    <tr>
+                        <th>Öğretmen Adı</th>
+                        <th>Branş</th>
+                        <th>Etkinlik Adı/No</th>
+                        <th>Araçlar Puanı</th>
+                        <th>Etkinlik Puanı</th>
+                        <th>Bağlantılar Puanı</th>
+                        <th>Genel Toplam</th>
+                    </tr>
+                </thead>
+                <tbody id="kayit-tablosu-govdesi">
+                    <!-- Kayıtlar buraya JavaScript ile eklenecek -->
+                </tbody>
+            </table>
         </div>
     </div>
 
